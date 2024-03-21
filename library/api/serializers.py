@@ -1,0 +1,9 @@
+from rest_framework import serializers
+
+from books.models import Book
+
+class BookSerializer(serializers):
+    """a serializer to assist in displaying json data from the Book model"""
+    class Meta:
+        model = Book
+        fields = ['title', 'subtitle', 'author', 'isbn']
