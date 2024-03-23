@@ -7,3 +7,8 @@ class PostList(ListCreateAPIView):
     # display a collectioon of posts as well as allow creating new ones
     queryset = Post.objects.all()
     serializer_class = PostSerializer
+
+class PostDetail(RetrieveUpdateDestroyAPIView):
+    # apply RUD operations on a single post
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
